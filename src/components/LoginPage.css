@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Share+Tech+Mono&display=swap');
+
+.futuristic-heading {
+  font-family: 'Orbitron', 'Share Tech Mono', 'Segoe UI', Arial, sans-serif;
+  color: #00eaff;
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin: 0 0 2px 0;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 12px #00eaff33, 0 1px 0 #232a36;
+  text-transform: uppercase;
+}
+.futuristic-title {
+  font-family: 'Orbitron', 'Share Tech Mono', 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+  font-size: 2.3rem;
+  font-weight: 900;
+  margin: 0 0 10px 0;
+  letter-spacing: 2.5px;
+  text-shadow: 0 4px 24px #00eaff33, 0 2px 0 #232a36;
+  text-transform: uppercase;
+}
+.login-root {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #181c23;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+#starfield-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+  display: block;
+  background: #010910;
+}
+.login-card {
+  position: relative;
+  z-index: 2;
+  background: #232a36;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px #00eaff44, 0 1.5px 0 #2a2f3a;
+  padding: 0;
+  min-width: 700px;
+  max-width: 900px;
+  min-height: 440px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.login-card:hover {
+  transform: translateY(-10px) scale(1.06);
+  box-shadow: 0 16px 48px #00eaff33, 0 2.5px 0 #2a2f3a;
+}
+.login-card-split {
+  flex-direction: row;
+}
+.login-form-col {
+  flex: 1 1 0;
+  padding: 48px 40px 36px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: #232a36;
+}
+.login-logo-col {
+  flex: 1 1 0;
+  min-width: 0;
+  background: #181c23;
+  background-image: url('/static/logo1.png');
+  background-position: center 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 100%;
+}
+.login-logo-large {
+  width: 80%;
+  max-width: 320px;
+  min-width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 4px 32px #0008);
+}
+.login-header {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 18px;
+}
+.login-logo {
+  width: 38px;
+  margin-bottom: 8px;
+}
+.login-header h2 {
+  color: #00eaff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 2px 0;
+  letter-spacing: 1px;
+}
+.login-header h1 {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  letter-spacing: 1.5px;
+}
+.login-desc {
+  color: #bfc7d6;
+  font-size: 1rem;
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.login-form input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #2a3442;
+  background: #181c23;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.login-form input:focus {
+  border: 1.5px solid #00eaff;
+}
+.login-form button {
+  background: #00eaff;
+  color: #232a36;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  margin-top: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.18s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.18s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 2px 8px #00eaff33;
+}
+.login-form button:hover {
+  background: #39e0ff;
+  transform: scale(1.10);
+  box-shadow: 0 4px 16px #00eaff33;
+}
+.login-form button:active {
+  background: #00b8d4;
+  transform: scale(0.96);
+  box-shadow: 0 1px 4px #00eaff33;
+}
+.login-error {
+  color: #ff6b6b;
+  font-size: 0.98rem;
+  margin-top: 6px;
+  text-align: left;
+}
+.login-success {
+  color: #00eaff;
+  font-size: 0.98rem;
+  margin-top: 6px;
+  text-align: left;
+}
+@media (max-width: 900px) {
+  .login-card {
+    min-width: 90vw;
+    flex-direction: column;
+    min-height: 420px;
+  }
+  .login-logo-col {
+    display: none;
+  }
+}
